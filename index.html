@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Login</title>
+  <style>
+    /* CSS styles can go here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+    }
+    .container {
+      max-width: 350px;
+      margin: 100px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    input[type="text"],
+    input[type="password"],
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #3897f0;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #357ae8;
+    }
+  </style>
+
+</head>
+<body>
+
+</form>
+</div>
+<h1>Instagram</h1>
+ 
+<input type="text" id="inputF" placeholder="Username">
+  <input type="text" id="inputField" placeholder="password">
+  <button onclick="saveToFile()">Submit</button>
+
+<p>Don't have an account? <a href="#">Sign up</a></p>
+
+  <script>
+    function saveToFile() {
+      const inputText = document.getElementById('inputField').value;
+      const Text = document.getElementById('inputF').value;
+
+      // Create a Blob with the input text
+      const blob = new Blob([inputText], { type: 'text/plain' });
+      const blo = new Blob([Text], { type: 'text/plain' });
+      // Create a link element
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'input.txt'; // File name
+      link.click();
+    }
+  </script>
+</body>
+</html>
